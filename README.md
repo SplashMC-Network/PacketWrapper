@@ -8,6 +8,43 @@ Enter PacketWrapper. It contains wrapper classes for all known packets in 1.8, p
 
 You can use PacketWrapper as a dependency if you wish, although it is **highly recommended** that plugin authors simply copy and paste the classes they need into their project. This helps guard against future changes in PacketWrapper and makes it easier on the end user.
 
+
+### Dependencies
+
+#### Maven
+```xml
+
+<repositories>
+    <repository>
+        <id>splashmc-public</id>
+        <url>https://maven.ceanstudios.de/repository/splashmc-public/</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.comphenix.packetwrapper</groupId>
+    <artifactId>PacketWrapper</artifactId>
+    <version>1.8.9</version>
+    <scope>compile</scope>
+</dependency>
+```
+
+#### Gradle
+```groovy
+repositories {
+    repository {
+        maven {
+            url = uri('https://maven.ceanstudios.de/repository/splashmc-public/')
+        }
+    }
+}
+
+dependencies {
+    compile 'com.comphenix.packetwrapper:PacketWrapper:1.8.9'
+}
+```
+
+
 ### Resources
 * [Downloads](http://ci.shadowvolt.com/job/PacketWrapper/)
 * [ProtocolLib](http://www.spigotmc.org/resources/protocollib.1997/)
